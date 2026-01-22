@@ -1,0 +1,45 @@
+.markdown-viewer {
+  max-width: 1000px;
+  margin: 100px auto 2rem;
+  padding: 2rem;
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  box-shadow: 0 8px 40px rgba(0, 255, 255, 0.15);
+  border: 1px solid var(--border-glow);
+}
+
+.markdown-content {
+  line-height: 1.8;
+}
+
+.markdown-content > *:first-child {
+  margin-top: 0;
+}
+
+.markdown-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1.5em 0;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
+}
+
+.markdown-content p {
+  margin: 1em 0;
+  color: var(--text-primary);
+}
+
+.markdown-content strong {
+  color: var(--neon-cyan);
+  font-weight: 600;
+}
+
+.markdown-content em {
+  color: var(--neon-purple);
+}
+
+@media (max-width: 768px) {
+  .markdown-viewer {
+    margin: 80px 1rem 1rem;
+    padding: 1.5rem;
+  }
+}
