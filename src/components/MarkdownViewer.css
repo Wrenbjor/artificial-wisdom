@@ -33,8 +33,85 @@
   font-weight: 600;
 }
 
+.markdown-content .internal-link {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--neon-cyan);
+  transition: all 0.2s ease;
+}
+
+.markdown-content .internal-link:hover {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+}
+
+.markdown-content .external-link {
+  color: var(--neon-purple);
+  text-decoration: none;
+}
+
+.markdown-content .external-link:hover {
+  text-decoration: underline;
+}
+
+.markdown-content .external-link::after {
+  content: ' ↗';
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
 .markdown-content em {
   color: var(--neon-purple);
+}
+
+.markdown-error {
+  padding: 2rem;
+  text-align: center;
+  color: #ff6666;
+}
+
+.markdown-error pre {
+  text-align: left;
+  background: rgba(255, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.mermaid-loading {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.mermaid-rendered {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.mermaid-rendered svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.mermaid-fallback {
+  background: rgba(255, 100, 100, 0.1);
+  border: 1px solid rgba(255, 100, 100, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.mermaid-fallback .mermaid-error {
+  margin: 0;
+  background: transparent;
+}
+
+.mermaid-fallback .mermaid-error code {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
 }
 
 @media (max-width: 768px) {
